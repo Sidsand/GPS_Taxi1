@@ -1,0 +1,28 @@
+﻿<Window x:Class="OOP_lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oop_lab2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="399" Width="800">
+    <Grid Background="Pink">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="175*"/>
+            <ColumnDefinition Width="221*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Stat" Content="Координаты вершин:" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" Height="154" Width="346" Grid.ColumnSpan="2"/>
+        <Canvas x:Name="canvas" Background="White" Margin="0,6,10,12" HorizontalAlignment="Right" Width="400" Height="350" Grid.Column="1"/>
+        <Button x:Name="Прямоугольник" Content="Произвольный&#xD;&#xA;Прямоугольник" Margin="10,4,241,296" Click="Прямоугольник_Click" Background="BlanchedAlmond" />
+        <Button x:Name="Треугольник" Content="Произвольный&#xD;&#xA;Треугольник" Margin="133,4,118,296" Click="Треугольник_Click" Background="BlanchedAlmond"/>
+        <Button x:Name="Квадрат" Content="Заданный&#xD;&#xA;Прямоугольник" Margin="257,35,436,297" Click="Квадрат_Click" Background="BlanchedAlmond" Grid.ColumnSpan="2"/>
+        <Slider x:Name="ОсьX" HorizontalAlignment="Left" Margin="91,153,0,0" VerticalAlignment="Top" Width="265" IsDirectionReversed="True" Minimum="-100" Maximum="100" ValueChanged="ОсьX_ValueChanged" Grid.ColumnSpan="2"/>
+        <Slider x:Name="ОсьY" HorizontalAlignment="Left" Margin="91,181,0,0" VerticalAlignment="Top" Width="265" Minimum="-100" Maximum="100" ValueChanged="ОсьY_ValueChanged" Grid.ColumnSpan="2"/>
+        <Label Content="Сдвиг по X:" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Height="23" Width="76"/>
+        <Label Content="Сдвиг по Y:" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Height="23" Width="76"/>
+        <Button x:Name="Очистка" Content="Очистить" Margin="10,76,436,0" VerticalAlignment="Top" Height="72" Click="Clear_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="RectH" HorizontalAlignment="Left" Height="23" Margin="257,6,0,0" TextWrapping="Wrap" Text="15" VerticalAlignment="Top" Width="45"/>
+        <TextBox x:Name="RectW" HorizontalAlignment="Left" Height="23" Margin="310,6,0,0" TextWrapping="Wrap" Text="20" VerticalAlignment="Top" Width="46" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
